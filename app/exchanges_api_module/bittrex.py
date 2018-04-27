@@ -22,3 +22,7 @@ class bittrex(object):
 	def get_market_summery(ico):
 		r = requests.get('https://bittrex.com/api/v1.1/public/getmarketsummary?market=btc-'+ico)
 		return r
+
+	def get_summaries():
+		r = requests.get('https://bittrex.com/api/v1.1/public/getmarketsummaries')
+		return r

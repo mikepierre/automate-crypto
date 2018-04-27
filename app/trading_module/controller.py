@@ -23,3 +23,7 @@ def get_sell():
 def get_currency():
     ico = request.args.get('ico')
     return jsonify(bittrex.get_market_summery(ico).json())
+
+@trading_module.route("/get-summaries", methods=['GET'])
+def get_summaries():
+    return jsonify(bittrex.get_summaries().json())
