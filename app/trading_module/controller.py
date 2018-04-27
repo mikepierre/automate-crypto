@@ -7,9 +7,9 @@ from app.exchanges_api_module.bittrex import bittrex
 trading_module = Blueprint('main', __name__)
 
 @trading_module.route("/", methods=['GET', 'POST'])
-def hello():
-	return "Hello World!!"
+def index():
+	return render_template("trading_module/layout.html")
 
-@trading_module.route("/login", methods=['GET', 'POST'])
-def login():
+@trading_module.route("/set-sell", methods=['GET', 'POST'])
+def set_sell():
     return "login"

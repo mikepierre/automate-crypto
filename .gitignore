@@ -1,2 +1,2 @@
 __pycache__
-app/web/bower_components/*
+app/static/bower_components/*
