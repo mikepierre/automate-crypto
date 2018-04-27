@@ -1,6 +1,7 @@
 # Import flask dependencies
 from flask import Blueprint, request, render_template, \
-                  flash, g, session, redirect, url_for
+                  flash, g, session, redirect, url_for,\
+                  jsonify
 # Import Bittrex API
 from app.exchanges_api_module.bittrex import bittrex
 # Define the blueprint
@@ -12,4 +13,13 @@ def index():
 
 @trading_module.route("/set-sell", methods=['GET', 'POST'])
 def set_sell():
-    return "login"
+    return "set sell"
+
+@trading_module.route("/set-sell", methods=['POST'])
+def get_sell():
+    return "get sell"
+
+@trading_module.route("/get-currency", methods=['GET'])
+def get_currency():
+    ico = request.args.get('ico')
+    return jsonify(bittrex.get_market_summery(ico).json())

@@ -18,3 +18,7 @@ class bittrex(object):
 		r = requests.get(\
 			'https://bittrex.com/api/v1.1/market/selllimit?apikey=API_KEY&market=BTC-LTC&quantity=1.2&rate=1.3')
 		return r
+
+	def get_market_summery(ico):
+		r = requests.get('https://bittrex.com/api/v1.1/public/getmarketsummary?market=btc-'+ico)
+		return r
