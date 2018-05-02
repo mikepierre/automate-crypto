@@ -6,14 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Automate Crypto</title>
-  <!-- Bootstrap core CSS-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Page level plugin CSS-->
   <link href="{{ url_for('static',filename='css/sb-admin.css') }}" rel="stylesheet">
-  <!-- Custom styles for this template-->
-  <link href="{{ url_for('static',filename='css/sb-admin.css') }}" rel="stylesheet">
+
+    <!--JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{ url_for('static',filename='js/ajax.js') }}"></script>
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -58,7 +60,7 @@
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Search for... btc">
               <span class="input-group-append">
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#icoDataModal">
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#icoDataModal" id="coin-data" onclick="javascript:getCoinData();">
                   <i class="fa fa-search"></i>
                 </button>
               </span>
@@ -189,23 +191,7 @@
         </div>
       </div>
     </div>
-    <!-- Bootstrap core JavaScript-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="{{ url_for('static',filename='js/ajax.js') }}"></script>
-    <!-- Page level plugin JavaScript-->
-    <!--<script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>-->
-    <!-- Custom scripts for all pages-->
-    <!--<script src="{{ url_for('static',filename='js/sb-admin.min.js') }}"></script>-->
-    <!-- Custom scripts for this page-->
-    <!--
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
-  -->
+
   </div>
 </body>
 <!-- Keys Modal -->
