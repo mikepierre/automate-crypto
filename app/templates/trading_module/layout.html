@@ -120,7 +120,7 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+          <i class="fa fa-table"></i> Currencies</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -134,30 +134,20 @@
                   <th>TimeStamp</th>
                 </tr>
               </thead>
-              <tfoot>
-                <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
-                </tr>
-              </tfoot>
               <tbody>
                 <tr>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                  <td>2011/04/25</td>
-                  <td>$320,800</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        <div class="card-footer small text-muted">Currencies</div>
       </div>
     </div>
     <!-- /.container-fluid-->
@@ -201,13 +191,20 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
+        <h4 class="modal-title">Your Keys</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
-        Modal body..
+
+        <div class="form-group">
+          <label for="currency_name">Bittrex Key*</label>
+          <input type="text" class="form-control" id="bittrex_key">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary form-control">Update Key</button>
+        </div>
       </div>
 
       <!-- Modal footer -->
@@ -231,7 +228,40 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        Modal body..
+
+
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Currencies</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Market Currency</th>
+                  <th>Base Volume</th>
+                  <th>Bid</th>
+                  <th>Ask</th>
+                  <th>Last</th>
+                  <th>TimeStamp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Currencies</div>
+      </div>
+
       </div>
 
       <!-- Modal footer -->
@@ -259,6 +289,11 @@
           <label for="currency_name">Currency Name:</label>
           <input type="text" class="form-control" id="currency_name">
         </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary form-control">Add Buy</button>
+        </div>
+
       </div>
 
       <!-- Modal footer -->
@@ -288,6 +323,9 @@
         <input type="text" class="form-control" id="coin-to-sell">
       </div>
 
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary form-control">Add Sale</button>
+      </div>
 
       </div>
 
